@@ -1,0 +1,26 @@
+anomalies:
+
+ 1) name: "Error Spike"
+    severity: "High"
+    description: "Unusually large number of ERROR logs within a short time window"
+    detection_logic: "Count logs where level = ERROR. Trigger if count exceeds threshold (e.g., >50 errors in 1 minute)."
+
+ 2) name: "High Latency"
+    severity: "Medium"
+    description: "Application response time significantly higher than normal"
+    detection_logic: "Monitor response_time metadata. Trigger if average latency exceeds threshold (e.g., >1000 ms)."
+
+ 3) name: "Service Unavailable"
+    severity: "High"
+    description: "Service stopped responding or returning failures"
+    detection_logic: "Detect repeated timeout/connection failure logs. Trigger if failures persist for defined duration."
+
+ 4) name: "Multiple Failed Logins"
+    severity: "Medium"
+    description: "Excessive authentication failures indicating possible attack"
+    detection_logic: "Count failed login events from auth-service. Trigger if failures exceed threshold (e.g., >10 failures per minute per user/IP)."
+
+ 5) name: "Database Connection Exhaustion"
+    severity: "High"
+    description: "Database unable to serve requests due to connection limits"
+    detection_logic: "Monitor database-service logs. Trigger if connection pool errors or max connections reached messages appear repeatedly."
