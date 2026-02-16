@@ -1,0 +1,22 @@
+# INFO Log
+timestamp: "2026-02-16T20:50:10Z"
+level: "INFO"
+service: "auth-service"
+message: "User login successful"
+user_id: "siva_1724"
+request_id: "req-1724"
+
+# WARNING Log
+timestamp: "2026-02-16T20:52:33Z"
+level: "WARNING"
+service: "storage-service"
+message: "Disk usage exceeded 80%"
+host: "siva"
+
+# ERROR Log
+timestamp: "2026-02-16T20:55:01Z"
+level: "ERROR"
+service: "payment-service"
+message: "Payment failed"
+event_id: "evt-1717"
+
